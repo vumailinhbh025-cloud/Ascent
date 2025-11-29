@@ -1,0 +1,222 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header .navbar {
+    height: 140px;
+}
+
+.header .navbar .navbar-collapse {
+    font-size: 18px;
+}
+
+.header .offcanvas-end {
+    background-color: #fff0e5;
+    border-left: 4px solid orange !important;
+}
+
+.header .offcanvas-end .btn-close {
+    background: rgb(255, 166, 0);
+    width: 25px;
+    height: 20px;
+}
+
+.header .list-1 {
+    position: relative;
+    display: inline-block;
+}
+
+.header .list-1 .card {
+    position: absolute;
+    display: none;
+    /* Ẩn nó đi */
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    /* Đảm bảo đủ rộng */
+    cursor: pointer;
+}
+
+.header .list-1:hover .card {
+    display: block;
+}
+
+.header .list-group .list-group-item:hover {
+    background-color: orange;
+    color: white;
+    transition: all 0.5s ease, color 0.5s;
+}
+
+.header .list-group .list-group-item:hover .item-1 {
+    color: white !important;
+    transition: color 0.5s;
+}
+
+/* Carousel */
+.carousel {
+    height: 700px;
+    background: #FFF0E5;
+    background: -moz-linear-gradient(top, #FFF0E5 0%, #F2E4DA 45%, #FFFFFF 100%);
+    background: -webkit-linear-gradient(top, #FFF0E5 0%, #F2E4DA 45%, #FFFFFF 100%);
+    background: linear-gradient(to bottom, #FFF0E5 0%, #F2E4DA 45%, #FFFFFF 100%);
+}
+
+.carousel .container .kite {
+    position: relative;
+}
+
+.carousel .container .kite .content {
+    z-index: 10 !important;
+}
+
+.carousel .container .kite img {
+    position: absolute;
+    left: -80px;
+    bottom: -20px;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+/* about us */
+.about-us {
+    min-height: 600px;
+}
+
+.about-us .container .award .card {
+    border-bottom: 5px solid green;
+}
+
+
+/* statistic */
+.statistic {
+    min-height: 500px;
+}
+
+/* extra */
+.extra {
+    min-height: 800px;
+    background-image: url(/Ascent_image/class-j.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.extra .container .card img {
+    width: 380px;
+    height: 250px;
+}
+
+/* products */
+.product {
+    min-height: 1100px;
+}
+
+.product .sun {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+
+.product .sun .sun-1 {
+    position: absolute;
+    left: 225px;
+    width: 50%;
+    top: 25px;
+    animation: up-down 2s linear infinite;
+}
+
+@keyframes up-down {
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+.product .sun .sun-2 {
+    position: absolute;
+    left: -110px;
+    width: 116%;
+    top: 155px;
+}
+
+.product .sun .bird img {
+    position: absolute;
+    top: -550px;
+    right: -25px;
+    animation: left-right 2s linear infinite;
+}
+
+@keyframes left-right {
+    50% {
+        transform: translateX(14px);
+    }
+}
+
+/* price */
+.price {
+    min-height: 800px;
+}
+
+.price .container .card .btn {
+    height: 70px;
+    width: 130px;
+    transform: translateX(100px);
+}
+
+
+/* craft */
+.craft {
+    min-height: 800px;
+}
+.craft .man{
+    position: relative;
+    height: 100%;
+}
+.craft .man img{
+    position: absolute;
+    right: 0px;
+    top: -100px;
+    animation: up-down 2s linear infinite;
+}
+@keyframes up-down {
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+/* blogs */
+.blogs{
+    min-height: 800px;
+}
+.blogs .card .time{
+    position: absolute;
+    right: 20px;
+    bottom: 280px;
+    width: 70px;
+    height: 90px;
+} 
+.blogs .card:hover .card-title{
+    color: rgb(10, 221, 151);
+    transition: color 0.5s;
+}
+.blogs .card .detail:hover{
+    color: orange !important;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+/* education */
+.education{
+    min-height: 400px;
+    background-image: url(/Ascent_image/stay-shape.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 70%;
+}
+
+/* footer */
+.footer{
+    min-height: 600px;
+}

@@ -1,0 +1,455 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    --bs-success: green;
+}
+
+.header .navbar-toggler {
+    background: orange;
+    width: 40px;
+    height: 40px;
+}
+
+.header .navbar-nav .nav-item {
+    position: relative;
+    display: inline-block;
+}
+
+.header .navbar-nav .nav-link:hover {
+    color: orange !important;
+    transition: color 0.5s;
+}
+
+.header .navbar-nav .nav-item .card {
+    position: absolute;
+    display: none;
+    /* Ẩn nó đi */
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    /* Đảm bảo đủ rộng */
+    cursor: pointer;
+}
+
+.header .navbar-nav .nav-item:hover .card {
+    display: block;
+    /* Hiện menu con ra */
+}
+
+.header .navbar-nav .list-group .list-group-item:hover {
+    background-color: orange;
+    color: white;
+    transition: all 0.5s ease, color 0.5s;
+}
+
+.header .navbar-nav .list-group .list-group-item:hover .item-1 {
+    color: white !important;
+    transition: color 0.5s;
+}
+
+
+/*invest*/
+.invest {
+    min-height: 500px;
+}
+
+.invest .container .card i {
+    width: 80px;
+    height: 70px;
+    border-radius: 50%;
+    line-height: 68px;
+    padding: 0 20px;
+    font-size: 40px;
+    color: white;
+}
+
+/* Program*/
+.program {
+    background-image: url(/Ascent_image/pencil-rocket.png);
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: top right;
+    min-height: 800px;
+}
+
+.program .row .card i {
+    margin: 0px 20px;
+    height: 78px;
+    width: 80px;
+    line-height: 74px;
+    font-size: 50px;
+    padding: 0px 10px;
+    color: green;
+}
+
+.program .row .card:hover {
+    box-shadow: 0px 0px 12px 0px #424242;
+    transition: box-shadow 0.5s;
+}
+
+.program .row .card:hover i {
+    background-color: green;
+    color: white;
+    transition: all 0.5s;
+}
+
+.program .row .card:hover .card-title {
+    color: green !important;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.program .row .card-end:hover {
+    color: green;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+/*portfolio*/
+.portfolio {
+    min-height: 500px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: orange !important;
+    color: aliceblue;
+}
+
+.portfolio .grid-container .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
+.portfolio .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 260px 260px;      /* 2 hàng */
+    gap: 20px;
+}
+.portfolio .item-1{
+    grid-row: 1/span 2;
+}
+.portfolio .item-2{
+    width: 500px;
+}
+.portfolio .item-3{
+    width: 300px;
+}
+.portfolio .item-4{
+    width: 400px;
+}
+.portfolio .item-5{
+    width: 400px; 
+    transform: translateX(-100px);
+}
+.portfolio .item{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+.portfolio .item .overlay{
+    position: absolute;
+    background: rgba(255, 166, 0, .9);
+    height: 85%;
+    width: 85%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+} 
+.portfolio .grid-container .item:hover .overlay{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+.portfolio .overlay a{
+    position: absolute;
+    left: 50%; /* Căn giữa ngang: Đặt left: 50% rồi dịch chuyển ngược lại 50% chiều rộng của chính nó */
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    color: white;
+    border-radius: 50%;
+    bottom: -3px;
+    
+}
+/* Grid 2 cột chuẩn mẫu */
+#pills-school .school-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Bố cục 2 cột – giữ theo Bootstrap */
+#pills-school .portfolio-grid-school img {
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+    
+}
+
+/* ẢNH 1 – ngang rộng (tỷ lệ 16:9) */
+.school-img-1 {
+    height: 400px;
+    width: 630px;
+    object-position: center;
+    
+}
+
+/* ẢNH 2 – gần vuông (tỷ lệ 1:1.1) */
+.school-img-2 {
+    height: 400px;
+    width: 500px;
+    object-position: center top;
+}
+
+/* ẢNH 3 – ngang nhưng thấp hơn ảnh 1 (tỷ lệ 4:3) */
+.school-img-3 {
+    height: 400px;
+    width: 530px;
+    object-position: center;
+}
+
+/* ẢNH 4 – dọc cao (tỷ lệ 3:4) */
+.school-img-4 {
+    height: 400px;
+    width: 600px;
+    object-position: center;
+    transform: translate(-100px);
+}
+#pills-school .school{
+    position: relative;
+    height: 100%;
+}
+#pills-school .school .overlay{
+    position: absolute;
+    background: rgba(255, 166, 0, .9);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+#pills-school .school:hover .overlay{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+                    /* Learn */
+#pills-learn .learn-grid img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+}
+.learn-img-1{
+    height: 500px;
+    object-position: center top;
+}
+.learn-img-2{
+    height: 500px;
+    object-position: center;
+}
+#pills-learn .learn{
+    position: relative;
+    height: 100%;
+}
+#pills-learn .learn .overlay{
+    position: absolute;
+    background: rgba(255, 166, 0, .9);
+    height: 80%;
+    width: 80%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+#pills-learn .learn:hover .overlay{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+            /* child */
+#pills-child .child-grid img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+}
+.child-img-1{
+    height: 400px;
+}
+.child-img-2{
+    height: 400px;
+}
+#pills-child .child{
+    position: relative;
+    height: 100%;
+}
+#pills-child .child .overlay{
+    position: absolute;
+    background: rgba(255, 166, 0, .9);
+    height: 80%;
+    width: 80%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+#pills-child .child:hover .overlay{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/*Service*/
+.service {
+    min-height: 400px;
+}
+
+.service .card:hover {
+    box-shadow: 0px 0px 12px 0px #424242;
+    transition: box-shadow 0.5s;
+}
+
+.service .card:hover .card-title {
+    color: rgba(10, 83, 10, 0.5) !important;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.service .card .card-body .detail:hover {
+    color: blue !important;
+    transition: color 0.5s;
+}
+
+/*professional*/
+.professional {
+    min-height: 700px;
+}
+
+.professional .row .item i {
+    width: 40px;
+    height: 50px;
+    font-size: 40px;
+    color: rgb(255, 240, 229);
+}
+
+.professional .row .item i:hover {
+    color: palevioletred;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.professional .row img {
+    border-radius: 40px 10px 40px 10px;
+}
+
+.professional .row .card:hover img {
+    border-radius: 10px 40px 10px 40px;
+    transition: border-radius 0.5s ease;
+}
+
+.professional .row .card {
+    border-radius: 40px 10px 40px 10px;
+}
+
+.professional .row .card:hover {
+    border: 3px solid green !important;
+    transition: border 0.5s ease;
+}
+
+/*Student*/
+.student {
+    min-height: 600px;
+    background-image: url(/Ascent_image/knowledge-lshpe.png), url(/Ascent_image/knowledge-animal.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 90px, 300px;
+    background-position: left bottom, top right;
+}
+
+.student button {
+    width: 130px;
+    height: 70px;
+}
+
+/*client*/
+.client {
+    min-height: 800px;
+}
+
+.client .bottom {
+    position: relative;
+}
+
+.client .carousel {
+    position: absolute;
+    top: 85px;
+    overflow: hidden;
+}
+
+/* blog*/
+.blog {
+    min-height: 700px;
+}
+
+.blog .row .card .card-title:hover,
+.blog .row .card .card-text:hover {
+    color: aqua !important;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+/* connect*/
+.connect {
+    min-height: 500px;
+    background-image: url(/Ascent_image/bg-img\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
+.connect .pic-1 {
+    position: relative;
+    top: 60px;
+}
+
+.connect .pic-2 {
+    position: absolute;
+    left: 185px;
+    height: 453px;
+}
+
+.connect .email {
+    height: 70px;
+}
+
+.connect .input-group {
+    position: relative;
+}
+
+.connect .btn {
+    position: absolute;
+    right: 110px;
+    bottom: -6px;
+}
+
+/*Footer*/
+.footer {
+    min-height: 400px;
+    position: relative;
+}
+
+.footer .circle {
+    position: absolute;
+    right: 120px;
+    bottom: 65px;
+}
+
+.footer .fa-square:hover {
+    color: green;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.footer .list-group li:hover {
+    transform: translateX(10px) !important;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+.footer .list-group li:hover a{
+    color: orange !important;
+    transition: color 0.5s ease-in-out;
+}

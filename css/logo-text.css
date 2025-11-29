@@ -1,0 +1,58 @@
+/* ... Giữ nguyên body, header-text, carousel-wrapper ... */
+
+.carousel-wrapper {
+    overflow: hidden; 
+    width: 100%;
+    padding: 30px 0;
+    background-color: #f0f0f0;
+}
+
+.logo-track {
+    display: flex;
+    width: fit-content; 
+    /* Áp dụng animation trượt tại đây */
+    animation: slide-scroll 25s linear infinite; /* 25s là thời gian chạy */
+}
+
+/* KHỞI TẠO LỚP DỪNG */
+.logo-track.paused {
+    animation-play-state: paused;
+}
+
+/* --- TRẠNG THÁI MẶC ĐỊNH (MỜ) --- */
+.logo {
+    flex-shrink: 0; 
+    width: 150px;
+    height: 100px;
+    margin: 0 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    font-size: 36px;
+    font-weight: normal;
+    
+    /* Hiệu ứng MỜ */
+    opacity: 0.3; 
+    filter: grayscale(100%); 
+    transform: scale(0.9); 
+    
+    /* Transition cho hiệu ứng sáng/đậm mượt mà */
+    transition: all 0.2s ease-out; 
+}
+
+/* --- TRẠNG THÁI TÔ ĐẬM/TRUNG TÂM (is-active) --- */
+.logo.is-active {
+    opacity: 1; 
+    filter: none; 
+    font-weight: bold;
+    transform: scale(1.1); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+}
+
+/* Keyframes cho hiệu ứng trượt vô tận */
+@keyframes slide-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } 
+}

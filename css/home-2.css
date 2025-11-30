@@ -106,6 +106,10 @@
     width: 380px;
     height: 250px;
 }
+.extra .container .card:hover h5, .extra .container .card:hover .card-info p{
+    color: red;
+    transition: color 0.5s;
+}
 
 /* products */
 .product {
@@ -218,5 +222,42 @@
 
 /* footer */
 .footer{
-    min-height: 600px;
+    min-height: 200px;
+    position: relative;
+}
+.footer .input-group{
+    position: relative;
+}
+.footer #button-addon2{
+    position: absolute;
+    right: 0px;
+    bottom: 15px;
+}
+.footer .circle-2{
+    position: absolute;
+    right: 100px;
+    top: 320px
+}
+.footer .row .content-item i:hover{
+    color: green;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+.footer .row .list-page li:hover{
+    transform: translateX(10px) !important;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+.footer .row .list-page li:hover a{
+    color: orange !important;
+    transition: color 0.5s ease-in-out;
+}
+.footer .row .list-contact li:hover{
+    transform: translateX(10px) !important;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+.footer .row .list-contact li:hover p{
+    color: orange !important;
+    transition: color 0.5s ease-in-out;;
 }

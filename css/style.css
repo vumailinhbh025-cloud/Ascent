@@ -35,7 +35,7 @@ body {
     /* Ẩn nó đi */
     top: 100%;
     left: 0;
-    min-width: 160px;
+    min-width: 200px;
     /* Đảm bảo đủ rộng */
     cursor: pointer;
 }

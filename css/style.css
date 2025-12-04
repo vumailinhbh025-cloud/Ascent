@@ -125,6 +125,7 @@ body {
     /* Lớp phủ sẽ vuốt qua toàn bộ nút từ trái sang phải */
     transform: translateX(0);
 }
+
 /*invest*/
 .invest {
     min-height: 500px;
@@ -134,11 +135,12 @@ body {
     width: 80px;
     height: 70px;
     border-radius: 50%;
-    line-height: 68px;
-    padding: 0 20px;
+    line-height: 70px;
+    padding: 0 18px;
     font-size: 40px;
     color: white;
 }
+
 .invest .container .row .btn {
     position: relative;
     /* Rất quan trọng: Để định vị lớp phủ ::before */
@@ -173,7 +175,8 @@ body {
     /* Lớp phủ sẽ vuốt qua toàn bộ nút từ trái sang phải */
     transform: translateX(0);
 }
-.invest .container .row .btn:hover{
+
+.invest .container .row .btn:hover {
     color: white !important;
     transition: color 0.5s ease;
 }
@@ -213,7 +216,8 @@ body {
     /* Lớp phủ sẽ vuốt qua toàn bộ nút từ trái sang phải */
     transform: translateX(0);
 }
-.about-us .container .btn:hover{
+
+.about-us .container .btn:hover {
     color: white !important;
     transition: color 0.5s ease;
 }
@@ -498,6 +502,7 @@ body {
     transform: translateX(10px);
     transition: transform 0.5s;
 }
+
 .service .container .img .btn {
     position: relative;
     /* Rất quan trọng: Để định vị lớp phủ ::before */
@@ -532,7 +537,8 @@ body {
     /* Lớp phủ sẽ vuốt qua toàn bộ nút từ trái sang phải */
     transform: translateX(0);
 }
-.service .container .img .btn:hover{
+
+.service .container .img .btn:hover {
     color: white !important;
     transition: color 0.5s ease;
 }
@@ -581,7 +587,8 @@ body {
     width: 150px;
     height: 70px;
 }
-.student .container .btn:hover{
+
+.student .container .btn:hover {
     background: transparent;
     color: red;
     border: 2px solid red;
@@ -695,225 +702,293 @@ body {
 }
 
 /* 5️⃣ Mobile */
-@media only screen and (max-width: 480px){
-.header .bottom-header i, .header .bottom-header .btn{
-    display: none;
-}  
-.header .navbar-nav .nav-item .card {
-    position: absolute;
-    display: none;
-    top: 10px;
-    left: 100px;
-    min-width: 160px;
-    cursor: pointer;
-}
-.carousel .container .img-1{
-    height: 400px;
-}
-.carousel .container .img-2{
-    height: 400px;
-}
-.invest .invest-1 {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.invest .invest-1 h2, .invest .invest-1 p{
-    text-align: center;
-}
-.invest .invest-1 .btn{
-    margin-bottom: 24px;
-}
-.invest .col .card .card-body .card-title, .invest .col .card .card-text{
-    text-align: center;
-}
-.invest .card{
-    margin: 0px 25px;
-}
-.about-us .right img{
-    width: 275px;
-}
-.about-us .right{
-    display: flex;
-    flex-direction: column !important;
-    justify-content: center;
-    align-items: center;
-}
-.about-us .right .right-card{
-    width: 90%;
-}
-.about-us .potential{
-    text-align: center;
-}
-.portfolio .grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-.portfolio .grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-#pills-education .item{
-    width: 80%;
-    transform: translateX(35px);
-}
-#pills-school .row .item{
-    width: 80%;
-}
-#pills-school .school-img-1, #pills-school .school-img-2, #pills-school .school-img-3,#pills-school .school-img-4 {
+@media only screen and (max-width: 480px) {
 
-    width: 375px;
-}
-#pills-school .school-img-4{
-    transform: translateX(2px);
-}
-#pills-school .school .overlay{
-    transform: translateX(20px);
-}
-#pills-school .school .overlay-1{
-    left: -10px;
-}
-#pills-school .school .overlay-2{
-    left: 95px;
+    .header .bottom-header i,
+    .header .bottom-header .btn {
+        display: none;
+    }
 
-}
-#pills-school .school .overlay-3{
-    left: 80px;
-}
-#pills-school .school .overlay-4{
-    left: 140px;
-}
-#pills-coaching .grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-#pills-coaching .item{
-    width: 80%;
-    transform: translateX(35px);
-}
-.service .services-carousel .img img, .service .services-carousel .btn{
-    display: none;
-}
-.service .services-carousel .row{
+    .header .navbar-nav .nav-item .card {
+        display: none;
+        top: -12px;
+        left: 95px;
+        min-width: 220px;
+        cursor: pointer;
+    }
+
+    .carousel .container .img-1 {
+        height: 400px;
+    }
+
+    .carousel .container .img-2 {
+        height: 400px;
+    }
+
+    .invest .invest-1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .invest .invest-1 h2,
+    .invest .invest-1 p {
+        text-align: center;
+    }
+
+    .invest .invest-1 .btn {
+        margin-bottom: 24px;
+    }
+
+    .invest .col .card .card-body .card-title,
+    .invest .col .card .card-text {
+        text-align: center;
+    }
+
+    .invest .card {
+        margin: 0px 25px;
+    }
+
+    .about-us .right img {
+        width: 275px;
+    }
+
+    .about-us .right {
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-us .right .right-card {
+        width: 90%;
+    }
+
+    .about-us .potential {
+        text-align: center;
+    }
+
+    .portfolio .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #pills-education .item {
+        width: 80%;
+        transform: translateX(35px);
+    }
+
+    #pills-school .row .item {
+        width: 80%;
+    }
+
+    #pills-school .school-img-1,
+    #pills-school .school-img-2,
+    #pills-school .school-img-3,
+    #pills-school .school-img-4 {
+
+        width: 375px;
+    }
+
+    #pills-school .school-img-4 {
+        transform: translateX(2px);
+    }
+
+    #pills-school .school .overlay {
+        transform: translateX(20px);
+    }
+
+    #pills-school .school .overlay-1 {
+        left: -10px;
+    }
+
+    #pills-school .school .overlay-2 {
+        left: 95px;
+
+    }
+
+    #pills-school .school .overlay-3 {
+        left: 80px;
+    }
+
+    #pills-school .school .overlay-4 {
+        left: 140px;
+    }
+
+    #pills-coaching .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #pills-coaching .item {
+        width: 80%;
+        transform: translateX(35px);
+    }
+
+    .service .services-carousel .img img,
+    .service .services-carousel .btn {
+        display: none;
+    }
+
+    .service .services-carousel .row {
         margin: 0px 15p
-}
-.faq .row img{
-    width: 80%;
-    margin: 35px;
-}
-.faq .row h1, .faq .row p{
-    text-align: center;
-}
-.student {
-    background-image: none;
-    min-height: 300px;
-}
-.student .row .student-content-1 h1, .student .row .student-content-1 p, .student .row .student-content-1 .btn{
-    text-align: center;
-}
-.student .row .student-content-1 p{
-    transform: translateX(40px);
-}
-.student .row .student-content-1 .btn{
-    transform: translateX(95px);
-    margin-bottom: 20px;
-}
-.student .student-content-2{
-    display: none;
-}
-.client{
-    min-height: 600px;
-}
-.client .title{
-    text-align: center;
-}
-.client .bottom img{
-    height: 230px !important;
-}
-.client .bottom .carousel-inner{
-    display: none;
-}
-.blog .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.blog .container p{
-    text-align: center;
-}
-.blog .row .row-1 .card{
-    display: flex;
-    flex-direction: column !important;
-    justify-content: center;
-    align-items: center;
-}
-.blog .row .row-1 .card img{
-    padding: 30px 0px;
-}
-.blog .row .row-1 .card .card-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.blog .row .row-1 .card .card-body .card-title{
-    text-align: center;
-}
-.blog .row .row-2{
-    margin-top: 20px;
-}
-.blog .row .row-2 .card .card-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.blog .row .row-2 .card .card-body .card-title{
-    text-align: center;
-}
-.connect{
-    background-position: center;
-}
-.connect .container{
-    display: flex;
-    flex-direction: column-reverse !important;
-    justify-content: center;
-    align-items: center;
-}
-.connect .container .pic-1{
-    height: 240px !important;
-}
-.connect .container .pic-2{
-    height: 300px !important;
-    transform: translateX(-25px) !important;
-}
-.connect .right .email{
-    width: 100%;
-}
-.connect .right .btn{
-    top: -62px;
-    transform: translateX(275px);
-}
-.connect .right h1, .connect .right p{
-    text-align: center;
-}
-.footer{
-    margin-top: 50px;
-}
-.footer .detail ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 12px !important;
-}
-.footer .circle{
-    right: 25px;
-    bottom: 100px;
-}
+    }
+
+    .faq .row img {
+        width: 80%;
+        margin: 35px;
+    }
+
+    .faq .row h1,
+    .faq .row p {
+        text-align: center;
+    }
+
+    .student {
+        background-image: none;
+        min-height: 300px;
+    }
+
+    .student .row .student-content-1 h1,
+    .student .row .student-content-1 p,
+    .student .row .student-content-1 .btn {
+        text-align: center;
+    }
+
+    .student .row .student-content-1 p {
+        transform: translateX(40px);
+    }
+
+    .student .row .student-content-1 .btn {
+        transform: translateX(95px);
+        margin-bottom: 20px;
+    }
+
+    .student .student-content-2 {
+        display: none;
+    }
+
+    .client {
+        min-height: 600px;
+    }
+
+    .client .title {
+        text-align: center;
+    }
+
+    .client .bottom img {
+        height: 230px !important;
+    }
+
+    .client .bottom .carousel-inner {
+        display: none;
+    }
+
+    .blog .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .blog .container p {
+        text-align: center;
+    }
+
+    .blog .row .row-1 .card {
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .blog .row .row-1 .card img {
+        padding: 30px 0px;
+    }
+
+    .blog .row .row-1 .card .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .blog .row .row-1 .card .card-body .card-title {
+        text-align: center;
+    }
+
+    .blog .row .row-2 {
+        margin-top: 20px;
+    }
+
+    .blog .row .row-2 .card .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .blog .row .row-2 .card .card-body .card-title {
+        text-align: center;
+    }
+
+    .connect {
+        background-position: center;
+    }
+
+    .connect .container {
+        display: flex;
+        flex-direction: column-reverse !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .connect .container .pic-1 {
+        height: 240px !important;
+    }
+
+    .connect .container .pic-2 {
+        height: 300px !important;
+        transform: translateX(-25px) !important;
+    }
+
+    .connect .right .email {
+        width: 100%;
+    }
+
+    .connect .right .btn {
+        top: -62px;
+        transform: translateX(275px);
+    }
+
+    .connect .right h1,
+    .connect .right p {
+        text-align: center;
+    }
+
+    .footer {
+        margin-top: 50px;
+    }
+
+    .footer .detail ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 12px !important;
+    }
+
+    .footer .circle {
+        right: 25px;
+        bottom: 100px;
+    }
 
 
 }

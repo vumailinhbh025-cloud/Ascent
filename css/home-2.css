@@ -64,6 +64,40 @@
     color: white;
     transition: all 0.5s;
 }
+.header .offcanvas-body .btn {
+    position: relative;
+    /* Rất quan trọng: Để định vị lớp phủ ::before */
+    overflow: hidden;
+    /* Rất quan trọng: Ẩn phần ::before khi nó nằm ngoài nút */
+    cursor: pointer;
+    z-index: 1;
+    /* Đảm bảo nút nằm trên lớp phủ (tạm thời) */
+}
+
+.header .offcanvas-body .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    /* Màu hover: Xanh la nổi bật muon doi */
+    z-index: -1;
+    /* Đặt lớp phủ dưới nút */
+    /* Bắt đầu lớp phủ từ bên trái */
+    transform: translateX(-100%);
+
+    /* **HIỆU ỨNG CHUYỂN ĐỔI CHÍNH** */
+    /* Di chuyển lớp phủ mượt mà trong 0.4 giây */
+    transition: transform 0.4s ease-in-out;
+}
+
+.header .offcanvas-body .btn:hover::before {
+    /* * Khi hover, di chuyển lớp phủ (màu xanh la) từ -100% sang 0% */
+    /* Lớp phủ sẽ vuốt qua toàn bộ nút từ trái sang phải */
+    transform: translateX(0);
+}
 
 /* Carousel */
 .carousel {

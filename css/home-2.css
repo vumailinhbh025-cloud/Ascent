@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+.header .navbar .container .list-1 a:hover {
+    color: orange !important;
+    transition: color 0.5s ease;
+}
+
 .header .navbar {
     height: 140px;
 }
@@ -54,12 +59,16 @@
     transition: color 0.5s;
 }
 
+.header .brand i:hover {
+    background-color: orange !important;
+    color: white;
+    transition: all 0.5s;
+}
+
 /* Carousel */
 .carousel {
     height: 700px;
     background: #FFF0E5;
-    background: -moz-linear-gradient(top, #FFF0E5 0%, #F2E4DA 45%, #FFFFFF 100%);
-    background: -webkit-linear-gradient(top, #FFF0E5 0%, #F2E4DA 45%, #FFFFFF 100%);
     background: linear-gradient(to bottom, #FFF0E5 0%, #F2E4DA 45%, #FFFFFF 100%);
 }
 
@@ -67,16 +76,11 @@
     position: relative;
 }
 
-.carousel .container .kite .content {
-    z-index: 10 !important;
-}
-
 .carousel .container .kite img {
     position: absolute;
     left: -80px;
     bottom: -20px;
     opacity: 0.7;
-    z-index: 0;
 }
 
 /* about us */
@@ -88,6 +92,19 @@
     border-bottom: 5px solid green;
 }
 
+.about-us .container .button .btn-1:hover {
+    background-color: transparent;
+    color: orange !important;
+    border: 2px solid orange !important;
+    cursor: pointer;
+    transition: all 0.5s;
+
+}
+
+.about-us .container .button .btn-2:hover {
+    color: white !important;
+    transition: color 0.5s ease;
+}
 
 /* statistic */
 .statistic {
@@ -102,14 +119,183 @@
     background-position: left top;
 }
 
-.extra .container .card img {
-    width: 380px;
-    height: 250px;
-}
-.extra .container .card:hover h5, .extra .container .card:hover .card-info p{
+.extra .container .card:hover h5,
+.extra .container .card:hover .card-info p {
     color: red;
     transition: color 0.5s;
 }
+
+.extra .container .card .card-info:hover span i {
+    transform: translateX(10px);
+    transition: transform 0.5s;
+}
+
+.extra .image-wrap-1 {
+    width: 380px;
+    height: 250px;
+    background-image: url(/Ascent_image/portfolio-2.png);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.extra .slices-1 span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-image: url(/Ascent_image/portfolio-2.png);
+    background-size: 400% 100%;
+    transition: transform .6s ease;
+}
+
+.slices-1 span:nth-child(1) {
+    left: 0;
+    background-position: 0 0;
+    transition-delay: 0s;
+}
+
+.slices-1 span:nth-child(2) {
+    left: 25%;
+    background-position: 33% 0;
+    transition-delay: .1s;
+}
+
+.slices-1 span:nth-child(3) {
+    left: 50%;
+    background-position: 66% 0;
+    transition-delay: .2s;
+}
+
+.slices-1 span:nth-child(4) {
+    left: 75%;
+    background-position: 100% 0;
+    transition-delay: .3s;
+}
+
+.extra .image-wrap-1:hover .slices-1 span {
+    transform: translateY(100%);
+}
+
+.extra .image-wrap-2 {
+    width: 380px;
+    height: 250px;
+    background-image: url(/Ascent_image/portfolio-4.png);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.extra .slices-2 span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-image: url(/Ascent_image/portfolio-4.png);
+    background-size: 400% 100%;
+    transition: transform .6s ease;
+}
+
+.slices-2 span:nth-child(1) {
+    left: 0;
+    background-position: 0 0;
+    transition-delay: 0s;
+}
+
+.slices-2 span:nth-child(2) {
+    left: 25%;
+    background-position: 33% 0;
+    transition-delay: .1s;
+}
+
+.slices-2 span:nth-child(3) {
+    left: 50%;
+    background-position: 66% 0;
+    transition-delay: .2s;
+}
+
+.slices-2 span:nth-child(4) {
+    left: 75%;
+    background-position: 100% 0;
+    transition-delay: .3s;
+}
+
+.extra .image-wrap-2:hover .slices-2 span {
+    transform: translateY(100%);
+}
+
+.extra .image-wrap-3 {
+    width: 380px;
+    height: 250px;
+    background-image: url(/Ascent_image/portfolio-5.png);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.extra .slices-3 span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-image: url(/Ascent_image/portfolio-5.png);
+    background-size: 400% 100%;
+    transition: transform .6s ease;
+}
+
+.slices-3 span:nth-child(1) {
+    left: 0;
+    background-position: 0 0;
+    transition-delay: 0s;
+}
+
+.slices-3 span:nth-child(2) {
+    left: 25%;
+    background-position: 33% 0;
+    transition-delay: .1s;
+}
+
+.slices-3 span:nth-child(3) {
+    left: 50%;
+    background-position: 66% 0;
+    transition-delay: .2s;
+}
+
+.slices-3 span:nth-child(4) {
+    left: 75%;
+    background-position: 100% 0;
+    transition-delay: .3s;
+}
+
+.extra .image-wrap-3:hover .slices-3 span {
+    transform: translateY(100%);
+}
+
+
+/* logo */
+/* Container chính của Swiper */
+.mySwiper {
+    width: 80%;
+    /* Hoặc 100% */
+    height: 200px;
+    /* Chiều cao cố định để logo hiển thị */
+    margin: 0 auto;
+}
+
+/* Kiểu dáng cho mỗi slide (logo) */
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: auto;
+    max-height: 100%;
+    /* Đảm bảo logo nằm gọn trong chiều cao slide */
+    object-fit: contain;
+}
+
 
 /* products */
 .product {
@@ -157,6 +343,14 @@
     }
 }
 
+.product .container .button .btn-1:hover {
+    background-color: transparent;
+    color: red !important;
+    border: 2px solid red !important;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
 /* price */
 .price {
     min-height: 800px;
@@ -168,21 +362,99 @@
     transform: translateX(100px);
 }
 
+.price .container .btn-2 {
+    position: relative;
+    /* Rất quan trọng: Để định vị lớp phủ ::before */
+    overflow: hidden;
+    /* Rất quan trọng: Ẩn phần ::before khi nó nằm ngoài nút */
+    cursor: pointer;
+    z-index: 1;
+    /* Đảm bảo nút nằm trên lớp phủ (tạm thời) */
+}
+
+.price .container .btn-2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #71e0f6;
+    background-color: #71e0f6;
+    /* Màu hover: Xanh la nổi bật muon doi */
+    z-index: -1;
+    /* Đặt lớp phủ dưới nút */
+    /* Bắt đầu lớp phủ từ bên trái */
+    transform: translateX(-100%);
+
+    /* **HIỆU ỨNG CHUYỂN ĐỔI CHÍNH** */
+    /* Di chuyển lớp phủ mượt mà trong 0.4 giây */
+    transition: transform 0.4s ease-in-out;
+}
+
+.price .container .btn-2:hover::before {
+    /* * Khi hover, di chuyển lớp phủ (màu xanh la) từ -100% sang 0% */
+    /* Lớp phủ sẽ vuốt qua toàn bộ nút từ trái sang phải */
+    transform: translateX(0);
+}
+
+.price .container .btn {
+    position: relative;
+    /* Rất quan trọng: Để định vị lớp phủ ::before */
+    overflow: hidden;
+    /* Rất quan trọng: Ẩn phần ::before khi nó nằm ngoài nút */
+    cursor: pointer;
+    z-index: 1;
+    /* Đảm bảo nút nằm trên lớp phủ (tạm thời) */
+}
+
+.price .container .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #71e0f6;
+    background-color: #71e0f6;
+    /* Màu hover: Xanh la nổi bật muon doi */
+    z-index: -1;
+    /* Đặt lớp phủ dưới nút */
+    /* Bắt đầu lớp phủ từ bên trái */
+    transform: translateX(-100%);
+
+    /* **HIỆU ỨNG CHUYỂN ĐỔI CHÍNH** */
+    /* Di chuyển lớp phủ mượt mà trong 0.4 giây */
+    transition: transform 0.4s ease-in-out;
+}
+
+.price .container .btn:hover::before {
+    /* * Khi hover, di chuyển lớp phủ (màu xanh la) từ -100% sang 0% */
+    /* Lớp phủ sẽ vuốt qua toàn bộ nút từ trái sang phải */
+    transform: translateX(0);
+}
+
+.price .container .btn:hover {
+    color: #FFFFFF;
+}
 
 /* craft */
 .craft {
     min-height: 800px;
 }
-.craft .man{
+
+.craft .man {
     position: relative;
     height: 100%;
 }
-.craft .man img{
+
+.craft .man img {
     position: absolute;
     right: 0px;
     top: -100px;
     animation: up-down 2s linear infinite;
 }
+
 @keyframes up-down {
     50% {
         transform: translateY(-10px);
@@ -191,28 +463,36 @@
 }
 
 /* blogs */
-.blogs{
+.blogs {
     min-height: 800px;
 }
-.blogs .card .time{
+
+.blogs .card .time {
     position: absolute;
     right: 20px;
     bottom: 280px;
     width: 70px;
     height: 90px;
-} 
-.blogs .card:hover .card-title{
+}
+
+.blogs .card:hover .card-title {
     color: rgb(10, 221, 151);
     transition: color 0.5s;
 }
-.blogs .card .detail:hover{
+
+.blogs .card .detail:hover {
     color: orange !important;
     cursor: pointer;
     transition: all 0.5s;
 }
 
+.blogs .card .detail:hover i {
+    transform: translateX(10px);
+    transition: transform 0.5s;
+}
+
 /* education */
-.education{
+.education {
     min-height: 400px;
     background-image: url(/Ascent_image/stay-shape.png);
     background-repeat: no-repeat;
@@ -220,44 +500,221 @@
     background-size: 70%;
 }
 
+.education .btn:hover {
+    background-color: transparent;
+    color: orange !important;
+    border: 1px solid orange;
+    transition: all 0.5s ease;
+}
+
 /* footer */
-.footer{
+.footer {
     min-height: 200px;
     position: relative;
 }
-.footer .input-group{
+
+.footer .input-group {
     position: relative;
 }
-.footer #button-addon2{
+
+.footer #button-addon2 {
     position: absolute;
     right: 0px;
     bottom: 15px;
 }
-.footer .circle-2{
+
+.footer .circle-2 {
     position: absolute;
     right: 100px;
     top: 320px
 }
-.footer .row .content-item i:hover{
-    color: green;
+
+.footer .row .brand i:hover {
+    background-color: green !important;
+    color: #FFFFFF;
     cursor: pointer;
-    transition: color 0.5s;
+    transition: all 0.5s;
 }
-.footer .row .list-page li:hover{
+
+.footer .row .list-page li:hover {
     transform: translateX(10px) !important;
     cursor: pointer;
     transition: transform 0.5s ease-in-out;
 }
-.footer .row .list-page li:hover a{
+
+.footer .row .list-page li:hover a {
     color: orange !important;
     transition: color 0.5s ease-in-out;
 }
-.footer .row .list-contact li:hover{
+
+.footer .row .list-contact li:hover {
     transform: translateX(10px) !important;
     cursor: pointer;
     transition: transform 0.5s ease-in-out;
 }
-.footer .row .list-contact li:hover p{
+
+.footer .row .list-contact li:hover p,
+.footer .row .list-contact li:hover i {
     color: orange !important;
-    transition: color 0.5s ease-in-out;;
+    transition: color 0.5s ease-in-out;
+    ;
+}
+
+@media only screen and (max-width: 480px) {
+
+    .header .navbar-menu,
+    .header .fa-search {
+        display: none !important;
+    }
+
+    .carousel {
+        min-height: 200px;
+    }
+
+    .carousel .container {
+        padding: 20px 20px;
+        width: 100%;
+        height: 80%;
+    }
+
+    .carousel .container .kite img {
+        top: 350px;
+        transform: translateX(150px);
+    }
+
+    .carousel .right {
+        display: none;
+    }
+
+    .about-us .row .contact-1 {
+        text-align: center;
+    }
+
+    .about-us .row .contact-1 .button {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-us .row .contact-2 {
+        display: flex;
+        flex-direction: column-reverse !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-us .row .contact-2 .row-1 {
+        text-align: center;
+        transform: translateY(25px);
+        font-size: 60px;
+    }
+
+    .about-us .row .contact-2 .row-2 {
+        transform: translatey(-25px);
+        text-align: center;
+    }
+
+    .statistic .card-body {
+        text-align: center;
+    }
+
+    .extra {
+        background-size: 36%;
+        background-position-y: 120px;
+    }
+
+    .logo .swiper {
+        width: 100%;
+    }
+
+    .logo .swiper-wrapper .swiper-slide img {
+        width: 90% !important;
+    }
+
+    .product {
+        min-height: 1080px !important;
+    }
+
+    .product .sun .bird img {
+        top: -850px !important;
+        right: 5px;
+    }
+
+    .product .row .row-content-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .product .row .row-content-2 img {
+        width: 80% !important;
+        padding-top: 20px;
+    }
+
+    .product .sun .sun-2 {
+        left: -8px;
+        width: 105%;
+        top: 145px;
+    }
+
+    .product .sun .sun-1 {
+        left: 55px;
+        width: 75%;
+        top: 45px;
+    }
+
+    .price {
+        margin: 0px 0px;
+    }
+
+    .craft {
+        margin-top: 40px;
+        padding: 20px 0px;
+    }
+
+    .craft .container .row img {
+        width: 80%;
+    }
+
+    .craft .container .row .man img {
+        width: 30%;
+        top: -660px;
+    }
+
+    .education .container {
+        padding: 20px 30px !important;
+    }
+
+    .education .row-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0px;
+    }
+
+    .education .row-1 h1 {
+        padding-top: 10px !important;
+    }
+
+    .education .row-1 p {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .footer .info ul {
+        justify-content: center;
+        align-items: center;
+        gap: 30px !important;
+    }
+
+    .footer .circle-2 {
+        right: 30px;
+        top: 1070px;
+    }
+
+
+
+
 }

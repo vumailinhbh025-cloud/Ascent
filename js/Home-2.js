@@ -17,5 +17,13 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+
+  // --- BỎ PHẦN CẤU HÌNH PHÂN TRANG NÀY ĐI ---
+  /*
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  */
   
 });

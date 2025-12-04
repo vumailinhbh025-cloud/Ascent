@@ -1,10 +1,16 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
+
 body {
     --bs-success: green;
+}
+
+.header .container .icon i:hover {
+    background-color: orange;
+    transition: background-color 0.5s ease;
 }
 
 .header .navbar-toggler {
@@ -50,7 +56,75 @@ body {
     transition: color 0.5s;
 }
 
+.header .bottom-header .btn {
+    position: relative;
+    /* Rất quan trọng: Để định vị lớp phủ ::before */
+    overflow: hidden;
+    /* Rất quan trọng: Ẩn phần ::before khi nó nằm ngoài nút */
+    cursor: pointer;
+    z-index: 1;
+    /* Đảm bảo nút nằm trên lớp phủ (tạm thời) */
+}
 
+.header .bottom-header .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    /* Màu hover: Xanh la nổi bật muon doi */
+    z-index: -1;
+    /* Đặt lớp phủ dưới nút */
+    /* Bắt đầu lớp phủ từ bên trái */
+    transform: translateX(-100%);
+
+    /* **HIỆU ỨNG CHUYỂN ĐỔI CHÍNH** */
+    /* Di chuyển lớp phủ mượt mà trong 0.4 giây */
+    transition: transform 0.4s ease-in-out;
+}
+
+.header .bottom-header .btn:hover::before {
+    /* * Khi hover, di chuyển lớp phủ (màu xanh la) từ -100% sang 0% */
+    /* Lớp phủ sẽ vuốt qua toàn bộ nút từ trái sang phải */
+    transform: translateX(0);
+}
+
+/* carousel */
+.carousel-demo .container .row .btn {
+    position: relative;
+    /* Rất quan trọng: Để định vị lớp phủ ::before */
+    overflow: hidden;
+    /* Rất quan trọng: Ẩn phần ::before khi nó nằm ngoài nút */
+    cursor: pointer;
+    z-index: 1;
+    /* Đảm bảo nút nằm trên lớp phủ (tạm thời) */
+}
+
+.carousel-demo .container .row .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0dcaf0;
+    z-index: -1;
+    /* Đặt lớp phủ dưới nút */
+    /* Bắt đầu lớp phủ từ bên trái */
+    transform: translateX(-100%);
+
+    /* **HIỆU ỨNG CHUYỂN ĐỔI CHÍNH** */
+    /* Di chuyển lớp phủ mượt mà trong 0.4 giây */
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-demo .container .row .btn:hover::before {
+    /* * Khi hover, di chuyển lớp phủ (màu xanh la) từ -100% sang 0% */
+    /* Lớp phủ sẽ vuốt qua toàn bộ nút từ trái sang phải */
+    transform: translateX(0);
+}
 /*invest*/
 .invest {
     min-height: 500px;
@@ -64,6 +138,84 @@ body {
     padding: 0 20px;
     font-size: 40px;
     color: white;
+}
+.invest .container .row .btn {
+    position: relative;
+    /* Rất quan trọng: Để định vị lớp phủ ::before */
+    overflow: hidden;
+    /* Rất quan trọng: Ẩn phần ::before khi nó nằm ngoài nút */
+    cursor: pointer;
+    z-index: 1;
+    /* Đảm bảo nút nằm trên lớp phủ (tạm thời) */
+    color: white;
+}
+
+.invest .container .row .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0dcaf0;
+    z-index: -1;
+    /* Đặt lớp phủ dưới nút */
+    /* Bắt đầu lớp phủ từ bên trái */
+    transform: translateX(-100%);
+    /* **HIỆU ỨNG CHUYỂN ĐỔI CHÍNH** */
+    /* Di chuyển lớp phủ mượt mà trong 0.4 giây */
+    transition: transform 0.4s ease-in-out;
+}
+
+.invest .container .row .btn:hover::before {
+    color: white;
+    /* * Khi hover, di chuyển lớp phủ (màu xanh la) từ -100% sang 0% */
+    /* Lớp phủ sẽ vuốt qua toàn bộ nút từ trái sang phải */
+    transform: translateX(0);
+}
+.invest .container .row .btn:hover{
+    color: white !important;
+    transition: color 0.5s ease;
+}
+
+/* About us */
+.about-us .container .btn {
+    position: relative;
+    /* Rất quan trọng: Để định vị lớp phủ ::before */
+    overflow: hidden;
+    /* Rất quan trọng: Ẩn phần ::before khi nó nằm ngoài nút */
+    cursor: pointer;
+    z-index: 1;
+    /* Đảm bảo nút nằm trên lớp phủ (tạm thời) */
+    color: white;
+}
+
+.about-us .container .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0dcaf0;
+    z-index: -1;
+    /* Đặt lớp phủ dưới nút */
+    /* Bắt đầu lớp phủ từ bên trái */
+    transform: translateX(-100%);
+
+    /* **HIỆU ỨNG CHUYỂN ĐỔI CHÍNH** */
+    /* Di chuyển lớp phủ mượt mà trong 0.4 giây */
+    transition: transform 0.4s ease-in-out;
+}
+
+.about-us .container .btn:hover::before {
+    /* * Khi hover, di chuyển lớp phủ (màu xanh la) từ -100% sang 0% */
+    /* Lớp phủ sẽ vuốt qua toàn bộ nút từ trái sang phải */
+    transform: translateX(0);
+}
+.about-us .container .btn:hover{
+    color: white !important;
+    transition: color 0.5s ease;
 }
 
 /* Program*/
@@ -119,62 +271,75 @@ body {
     color: aliceblue;
 }
 
-.portfolio .grid-container .item img{
+.portfolio .grid-container .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 14px;
 }
-.portfolio .grid-container{
+
+.portfolio .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 260px 260px;      /* 2 hàng */
+    grid-template-rows: 260px 260px;
+    /* 2 hàng */
     gap: 20px;
 }
-.portfolio .item-1{
+
+.portfolio .item-1 {
     grid-row: 1/span 2;
 }
-.portfolio .item-2{
+
+.portfolio .item-2 {
     width: 500px;
 }
-.portfolio .item-3{
+
+.portfolio .item-3 {
     width: 300px;
 }
-.portfolio .item-4{
+
+.portfolio .item-4 {
     width: 400px;
 }
-.portfolio .item-5{
-    width: 400px; 
+
+.portfolio .item-5 {
+    width: 400px;
     transform: translateX(-100px);
 }
-.portfolio .item{
+
+.portfolio .item {
     position: relative;
     height: 100%;
     overflow: hidden;
 }
-.portfolio .item .overlay{
+
+.portfolio .item .overlay {
     position: absolute;
     background: rgba(255, 166, 0, .9);
     height: 85%;
     width: 85%;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-} 
-.portfolio .grid-container .item:hover .overlay{
+}
+
+.portfolio .grid-container .item:hover .overlay {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
-.portfolio .overlay a{
+
+.portfolio .overlay a {
     position: absolute;
-    left: 50%; /* Căn giữa ngang: Đặt left: 50% rồi dịch chuyển ngược lại 50% chiều rộng của chính nó */
+    left: 50%;
+    /* Căn giữa ngang: Đặt left: 50% rồi dịch chuyển ngược lại 50% chiều rộng của chính nó */
     transform: translateX(-50%);
     width: 20px;
     height: 20px;
     color: white;
     border-radius: 50%;
     bottom: -3px;
-    
+
 }
+
 /* Grid 2 cột chuẩn mẫu */
 #pills-school .school-grid {
     display: grid;
@@ -186,7 +351,7 @@ body {
     object-fit: cover;
     border-radius: 14px;
     display: block;
-    
+
 }
 
 /* ẢNH 1 – ngang rộng (tỷ lệ 16:9) */
@@ -194,7 +359,7 @@ body {
     height: 400px;
     width: 630px;
     object-position: center;
-    
+
 }
 
 /* ẢNH 2 – gần vuông (tỷ lệ 1:1.1) */
@@ -218,41 +383,48 @@ body {
     object-position: center;
     transform: translate(-100px);
 }
-#pills-school .school{
+
+#pills-school .school {
     position: relative;
     height: 100%;
 }
-#pills-school .school .overlay{
+
+#pills-school .school .overlay {
     position: absolute;
     background: rgba(255, 166, 0, .9);
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
-#pills-school .school:hover .overlay{
+
+#pills-school .school:hover .overlay {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
 
-                    /* Learn */
+/* Learn */
 #pills-learn .learn-grid img {
     width: 100%;
     object-fit: cover;
     border-radius: 18px;
     display: block;
 }
-.learn-img-1{
+
+.learn-img-1 {
     height: 500px;
     object-position: center top;
 }
-.learn-img-2{
+
+.learn-img-2 {
     height: 500px;
     object-position: center;
 }
-#pills-learn .learn{
+
+#pills-learn .learn {
     position: relative;
     height: 100%;
 }
-#pills-learn .learn .overlay{
+
+#pills-learn .learn .overlay {
     position: absolute;
     background: rgba(255, 166, 0, .9);
     height: 80%;
@@ -260,28 +432,34 @@ body {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
-#pills-learn .learn:hover .overlay{
+
+#pills-learn .learn:hover .overlay {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
-            /* child */
-#pills-child .child-grid img{
+
+/* child */
+#pills-child .child-grid img {
     width: 100%;
     object-fit: cover;
     border-radius: 18px;
     display: block;
 }
-.child-img-1{
+
+.child-img-1 {
     height: 400px;
 }
-.child-img-2{
+
+.child-img-2 {
     height: 400px;
 }
-#pills-child .child{
+
+#pills-child .child {
     position: relative;
     height: 100%;
 }
-#pills-child .child .overlay{
+
+#pills-child .child .overlay {
     position: absolute;
     background: rgba(255, 166, 0, .9);
     height: 80%;
@@ -289,7 +467,8 @@ body {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
-#pills-child .child:hover .overlay{
+
+#pills-child .child:hover .overlay {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
@@ -315,22 +494,60 @@ body {
     transition: color 0.5s;
 }
 
+.service .card .card-body .detail:hover .fa-arrow-right {
+    transform: translateX(10px);
+    transition: transform 0.5s;
+}
+.service .container .img .btn {
+    position: relative;
+    /* Rất quan trọng: Để định vị lớp phủ ::before */
+    overflow: hidden;
+    /* Rất quan trọng: Ẩn phần ::before khi nó nằm ngoài nút */
+    cursor: pointer;
+    z-index: 1;
+    /* Đảm bảo nút nằm trên lớp phủ (tạm thời) */
+    color: white;
+}
+
+.service .container .img .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0dcaf0;
+    z-index: -1;
+    /* Đặt lớp phủ dưới nút */
+    /* Bắt đầu lớp phủ từ bên trái */
+    transform: translateX(-100%);
+
+    /* **HIỆU ỨNG CHUYỂN ĐỔI CHÍNH** */
+    /* Di chuyển lớp phủ mượt mà trong 0.4 giây */
+    transition: transform 0.4s ease-in-out;
+}
+
+.service .container .img .btn:hover::before {
+    /* * Khi hover, di chuyển lớp phủ (màu xanh la) từ -100% sang 0% */
+    /* Lớp phủ sẽ vuốt qua toàn bộ nút từ trái sang phải */
+    transform: translateX(0);
+}
+.service .container .img .btn:hover{
+    color: white !important;
+    transition: color 0.5s ease;
+}
+
+
 /*professional*/
 .professional {
     min-height: 700px;
 }
 
-.professional .row .item i {
-    width: 40px;
-    height: 50px;
-    font-size: 40px;
-    color: rgb(255, 240, 229);
-}
-
-.professional .row .item i:hover {
-    color: palevioletred;
+.professional .row .brand i:hover {
+    color: white;
+    background-color: palevioletred !important;
     cursor: pointer;
-    transition: color 0.5s;
+    transition: all 0.5s;
 }
 
 .professional .row img {
@@ -361,8 +578,14 @@ body {
 }
 
 .student button {
-    width: 130px;
+    width: 150px;
     height: 70px;
+}
+.student .container .btn:hover{
+    background: transparent;
+    color: red;
+    border: 2px solid red;
+    transition: all 0.5s ease;
 }
 
 /*client*/
@@ -392,6 +615,11 @@ body {
     transition: color 0.5s;
 }
 
+.blog .row .card .card-text:hover i {
+    transform: translateX(10px);
+    transition: transform 0.5s;
+}
+
 /* connect*/
 .connect {
     min-height: 500px;
@@ -408,7 +636,7 @@ body {
 
 .connect .pic-2 {
     position: absolute;
-    left: 185px;
+    left: 100px;
     height: 453px;
 }
 
@@ -426,6 +654,16 @@ body {
     bottom: -6px;
 }
 
+.connect .left {
+    animation: move 2s linear infinite;
+}
+
+@keyframes move {
+    50% {
+        transform: translateX(20px);
+    }
+}
+
 /*Footer*/
 .footer {
     min-height: 400px;
@@ -438,10 +676,11 @@ body {
     bottom: 65px;
 }
 
-.footer .fa-square:hover {
-    color: green;
+.footer .brand a:hover i {
+    background-color: green !important;
+    color: white;
     cursor: pointer;
-    transition: color 0.5s;
+    transition: color 0.5s ease;
 }
 
 .footer .list-group li:hover {
@@ -449,7 +688,232 @@ body {
     cursor: pointer;
     transition: transform 0.5s ease-in-out;
 }
-.footer .list-group li:hover a{
+
+.footer .list-group li:hover a {
     color: orange !important;
     transition: color 0.5s ease-in-out;
+}
+
+/* 5️⃣ Mobile */
+@media only screen and (max-width: 480px){
+.header .bottom-header i, .header .bottom-header .btn{
+    display: none;
+}  
+.header .navbar-nav .nav-item .card {
+    position: absolute;
+    display: none;
+    top: 10px;
+    left: 100px;
+    min-width: 160px;
+    cursor: pointer;
+}
+.carousel .container .img-1{
+    height: 400px;
+}
+.carousel .container .img-2{
+    height: 400px;
+}
+.invest .invest-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.invest .invest-1 h2, .invest .invest-1 p{
+    text-align: center;
+}
+.invest .invest-1 .btn{
+    margin-bottom: 24px;
+}
+.invest .col .card .card-body .card-title, .invest .col .card .card-text{
+    text-align: center;
+}
+.invest .card{
+    margin: 0px 25px;
+}
+.about-us .right img{
+    width: 275px;
+}
+.about-us .right{
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+}
+.about-us .right .right-card{
+    width: 90%;
+}
+.about-us .potential{
+    text-align: center;
+}
+.portfolio .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.portfolio .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+#pills-education .item{
+    width: 80%;
+    transform: translateX(35px);
+}
+#pills-school .row .item{
+    width: 80%;
+}
+#pills-school .school-img-1, #pills-school .school-img-2, #pills-school .school-img-3,#pills-school .school-img-4 {
+
+    width: 375px;
+}
+#pills-school .school-img-4{
+    transform: translateX(2px);
+}
+#pills-school .school .overlay{
+    transform: translateX(20px);
+}
+#pills-school .school .overlay-1{
+    left: -10px;
+}
+#pills-school .school .overlay-2{
+    left: 95px;
+
+}
+#pills-school .school .overlay-3{
+    left: 80px;
+}
+#pills-school .school .overlay-4{
+    left: 140px;
+}
+#pills-coaching .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+#pills-coaching .item{
+    width: 80%;
+    transform: translateX(35px);
+}
+.service .services-carousel .img img, .service .services-carousel .btn{
+    display: none;
+}
+.service .services-carousel .row{
+        margin: 0px 15p
+}
+.faq .row img{
+    width: 80%;
+    margin: 35px;
+}
+.faq .row h1, .faq .row p{
+    text-align: center;
+}
+.student {
+    background-image: none;
+    min-height: 300px;
+}
+.student .row .student-content-1 h1, .student .row .student-content-1 p, .student .row .student-content-1 .btn{
+    text-align: center;
+}
+.student .row .student-content-1 p{
+    transform: translateX(40px);
+}
+.student .row .student-content-1 .btn{
+    transform: translateX(95px);
+    margin-bottom: 20px;
+}
+.student .student-content-2{
+    display: none;
+}
+.client{
+    min-height: 600px;
+}
+.client .title{
+    text-align: center;
+}
+.client .bottom img{
+    height: 230px !important;
+}
+.client .bottom .carousel-inner{
+    display: none;
+}
+.blog .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.blog .container p{
+    text-align: center;
+}
+.blog .row .row-1 .card{
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+}
+.blog .row .row-1 .card img{
+    padding: 30px 0px;
+}
+.blog .row .row-1 .card .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.blog .row .row-1 .card .card-body .card-title{
+    text-align: center;
+}
+.blog .row .row-2{
+    margin-top: 20px;
+}
+.blog .row .row-2 .card .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.blog .row .row-2 .card .card-body .card-title{
+    text-align: center;
+}
+.connect{
+    background-position: center;
+}
+.connect .container{
+    display: flex;
+    flex-direction: column-reverse !important;
+    justify-content: center;
+    align-items: center;
+}
+.connect .container .pic-1{
+    height: 240px !important;
+}
+.connect .container .pic-2{
+    height: 300px !important;
+    transform: translateX(-25px) !important;
+}
+.connect .right .email{
+    width: 100%;
+}
+.connect .right .btn{
+    top: -62px;
+    transform: translateX(275px);
+}
+.connect .right h1, .connect .right p{
+    text-align: center;
+}
+.footer{
+    margin-top: 50px;
+}
+.footer .detail ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px !important;
+}
+.footer .circle{
+    right: 25px;
+    bottom: 100px;
+}
+
+
 }
